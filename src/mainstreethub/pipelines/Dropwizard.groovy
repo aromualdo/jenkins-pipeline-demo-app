@@ -1,13 +1,10 @@
 package mainstreethub.pipelines;
 
-def notify() {
-  echo "I'm notifying";
-//  String message = "Hello";
-//  boolean success = true;
-//  slackSend(
-//          channel: "script-test",
-//          color: success ? "good" : "danger",
-//          message: "${message} - ${env.BUILD_URL}",
-//          tokenCredentialId: "slack-integration-token"
-//  )
+class Dropwizard implements Serializable{
+  def steps
+  Dropwizard(steps) { this.steps = steps }
+
+  def notify() {
+    echo "I'm notifying";
+  }
 }
