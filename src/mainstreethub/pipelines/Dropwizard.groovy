@@ -4,7 +4,7 @@ class Dropwizard implements Serializable{
   def steps
   Dropwizard(steps) { this.steps = steps }
 
-  def notify() {
+  def notifySlack() {
     echo "I'm notifying";
   }
 }
