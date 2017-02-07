@@ -3,11 +3,7 @@ class Dropwizard {
   def steps
   Dropwizard() {}
   def notifySlack() {
-    slackSend(
-            channel: "script-test",
-            color: "good",
-            message: "Hello",
-            tokenCredentialId: "slack-integration-token"
-    )
+    def mvn = tool("maven") + "/bin/mvn -B"
+    sh "${mvn} clean compile test-compile"
   }
 }
