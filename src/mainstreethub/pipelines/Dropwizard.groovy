@@ -1,4 +1,4 @@
-package com.mainstreethub.pipelines;
+package mainstreethub.pipelines;
 
 class Dropwizard implements Serializable{
   def steps
