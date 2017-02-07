@@ -60,7 +60,7 @@ class Dropwizard implements Serializable {
       steps.stage("Deploy to test") {
         steps.milestone()
 
-        notify("Starting deploy of ${application}:${newVersion} to TEST", true)
+        notify("Starting deploy of ${application}:${newVersion} to TEST", true, env)
 
         try {
           // Checkout the ops repo so that we can execute the run-stack script
@@ -91,9 +91,9 @@ class Dropwizard implements Serializable {
             """
           }
 
-          notify("Completed deploy of ${application}:${newVersion} to TEST", true)
+          notify("Completed deploy of ${application}:${newVersion} to TEST", true, env)
         } catch(e) {
-          notify("Failed deploy of ${application}:${newVersion} to TEST", false)
+          notify("Failed deploy of ${application}:${newVersion} to TEST", false, env)
           throw e
         }
       }
@@ -105,7 +105,7 @@ class Dropwizard implements Serializable {
       }
     }
 
-    def notify(String message, boolean success) {
+    def notify(String message, boolean success, env) {
       steps.slackSend(
               channel: "script-test",
               color: success ? "good" : "danger",
