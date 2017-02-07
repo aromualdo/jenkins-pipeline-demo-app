@@ -8,7 +8,7 @@ class Dropwizard implements Serializable {
     this.mvn = mvn
   }
 
-  def compile(args) {
+  def compile() {
     steps.sh "${mvn} clean compile test-compile"
   }
 }
