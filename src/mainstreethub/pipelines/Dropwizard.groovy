@@ -10,7 +10,7 @@ class Dropwizard implements Serializable {
       def git = steps.tool("git")
       def mvn = steps.tool("maven") + "/bin/mvn -B"
 
-      steps.checkout scm
+      steps.checkout steps.scm
 
       steps.sh "${git} config user.email engineering+jenkins2@mainstreethub.com"
       steps.sh "${git} config user.name jenkins"
