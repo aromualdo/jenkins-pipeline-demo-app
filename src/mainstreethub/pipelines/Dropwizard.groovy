@@ -1,9 +1,8 @@
 package mainstreethub.pipelines;
-class Dropwizard {
+class Dropwizard implements Serializable {
   def steps
-  Dropwizard() {}
-  def notifySlack() {
-    def mvn = tool("maven") + "/bin/mvn -B"
-    sh "${mvn} clean compile test-compile"
+  Dropwizard(steps) { this.steps = steps}
+  def compile(args) {
+    steps.sh "${steps.tool 'Maven'}/bin/mvn -o ${args}"
   }
 }
