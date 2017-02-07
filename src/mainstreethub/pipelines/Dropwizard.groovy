@@ -1,7 +1,7 @@
 package mainstreethub.pipelines;
-class Utilities {
+class Dropwizard {
   def steps
-  Utilities() {}
+  Dropwizard() {}
   def notifySlack() {
     println "I'm notifying";
   }
