@@ -3,6 +3,11 @@ class Dropwizard {
   def steps
   Dropwizard() {}
   def notifySlack() {
-    println "I'm notifying";
+    slackSend(
+            channel: "script-test",
+            color: "good",
+            message: "Hello",
+            tokenCredentialId: "slack-integration-token"
+    )
   }
 }
