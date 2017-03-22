@@ -1,0 +1,14 @@
+@import '../../styles/typography';
+
+.input-container {
+	display: flex;
+	margin-bottom: 12px;
+
+	& > * {
+		margin-right: 16px;
+	}
+}
+
+.notice {
+	@include smallText;
+}

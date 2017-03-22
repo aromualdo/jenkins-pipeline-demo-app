@@ -1,0 +1,19 @@
+@keyframes spin {
+	from {
+		transform: rotateZ(0deg);
+	}
+
+	to {
+		transform: rotateZ(360deg);
+	}
+}
+
+.loader-icon {
+	display: inline-block;
+	vertical-align: middle;
+	background-image: url('../../images/loading-icon.png');
+	background-size: contain;
+	height: 26px;
+	width: 26px;
+	animation: spin 1s linear infinite;
+}

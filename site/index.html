@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= htmlWebpackPlugin.options.title %></title>
+
+	<% if (htmlWebpackPlugin.files.favicon) { %>
+	<link rel="shortcut icon" href="<%=htmlWebpackPlugin.files.favicon%>">
+	<% } %>
+	<% for (var css in htmlWebpackPlugin.files.css) { %>
+	<link href="<%=htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
+	<% } %>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+
+	<style type="text/css">
+		html, body {
+			min-height: 100%;
+			font-family: 'Open Sans', sans-serif;
+		}
+	</style>
+
+</head>
+<body style="margin: 0;background-color: #F8FAFC;">
+
+<div class="sidebar"></div>
+<div id="app"></div>
+
+<script type="text/javascript">
+	(function () {
+		var hostname = window.location.hostname;
+		var src;
+		if (hostname === 'localhost' || hostname.indexOf('-test.mainstreethub.com') !== -1) {
+			src = 'https://sidebar-test.mainstreethub.com/sidebar.js'
+		} else {
+			src = 'https://sidebar.mainstreethub.com/sidebar.js';
+		}
+		var script = document.createElement('script');
+		script.src = src;
+		script.async = false;
+		script.onload = function() {
+			var s;
+			<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+				s = document.createElement('script');
+				s.src = '<%=htmlWebpackPlugin.files.chunks[chunk].entry %>';
+				s.async = false;
+				document.body.appendChild(s);
+			<% } %>
+		};
+		document.body.appendChild(script);
+	})();
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+@import "../styles/typography";
+
+.modal-wrap {
+	@include bodyText;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(#4C5962, .8);
+	z-index: 10000;
+	display: flex;
+	justify-content: center;
+	overflow-y: auto;
+	height: 100%;
+}
+.modal {
+	position: absolute;
+	background-color: #FFFFFF;
+	border-radius: 4px;
+	width: 1068px;
+	z-index: 10001;
+	margin: 80px auto;
+}
+.modal-header {
+	padding: 24px 34px;
+	border-bottom: 1px solid #E5E8EA;
+}
+.h1 {
+	color: #4C5962;
+	font-size: 32px;
+	font-weight: 600;
+}
+.flex {
+	display: flex;
+	flex-direction: row;
+}
+.flex-half {
+	flex: 1;
+	padding: 30px;
+}

@@ -1,0 +1,26 @@
+@import "../../styles/typography";
+
+.section {
+	margin-bottom: 12px;
+}
+
+.section-header {
+	@include subHeaderText;
+	margin-bottom: 12px;
+}
+
+.content-select {
+	width: 180px;
+}
+
+.subtype-option {
+	display: block;
+}
+
+.subtype-option-input {
+	margin-right: 6px;
+}
+
+.input-container {
+	margin-bottom: 12px;
+}

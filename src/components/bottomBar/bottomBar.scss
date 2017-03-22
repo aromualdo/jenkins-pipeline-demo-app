@@ -1,0 +1,26 @@
+@import "../../styles/typography";
+@import "../../styles/variables";
+
+.bottom-bar {
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid #E5E8EA;
+	padding: 18px 34px 24px;
+	align-items: center;
+}
+
+.left {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.right {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.text-action {
+	@include smallText;
+	text-transform: uppercase;
+	cursor: pointer;
+}

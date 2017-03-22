@@ -1,0 +1,51 @@
+@import "../../styles/typography";
+
+.textarea {
+	display: block;
+	resize: vertical;
+	width: 100%;
+	border: #BBB solid 1px;
+	border-radius: 4px;
+	padding: 8px 8px 16px 8px;
+	min-height: 80px;
+	font-size: 14px;
+}
+
+.textarea--error {
+	border-color: red;
+}
+
+.checkbox {
+	margin-bottom: 8px;
+	display: block;
+}
+
+.caption-group {
+	margin-bottom: 16px;
+}
+
+.caption-header-group {
+	display: flex;
+	margin-bottom: 8px;
+}
+
+.caption-header {
+	@include subHeaderText;
+}
+
+.textarea-group {
+	position: relative;
+}
+
+.textarea-count {
+	flex: 1;
+	text-align: right;
+}
+
+.textarea-count--error {
+	color: red;
+}
+
+.multi-platform-caption {
+	margin-top: -24px;
+}

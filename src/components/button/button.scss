@@ -1,0 +1,31 @@
+@import '../../styles/typography';
+@import '../../styles/variables';
+
+.identity-button {
+	line-height: 45px;
+	font-size: 13px;
+	color: $darkGray;
+	font-weight: bold;
+	background-color: $white;
+	border: $darkGray 2px solid;
+	border-radius: 32px;
+	padding: 0 32px;
+	cursor: pointer;
+	outline: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	min-width: 170px;
+}
+
+.identity-button:hover {
+	background-color: #F8FAFC;
+}
+
+.identity-button--disabled:hover {
+	cursor: not-allowed;
+}
+
+.content--loading {
+	opacity: 0;
+	height: 0;
+}

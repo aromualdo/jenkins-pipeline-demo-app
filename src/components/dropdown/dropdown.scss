@@ -1,0 +1,9 @@
+@import "../../styles/typography";
+
+.select {
+	@include bodyText;
+	height: 40px;
+	border-radius: 2px;
+	background-color: #FFF;
+	border-color: #BBB;
+}

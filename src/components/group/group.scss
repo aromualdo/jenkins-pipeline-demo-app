@@ -1,0 +1,10 @@
+@import "../../styles/typography";
+
+.group {
+	margin-bottom: 42px;
+}
+
+.header {
+	@include headerText;
+	margin-bottom: 12px;
+}

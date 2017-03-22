@@ -1,0 +1,11 @@
+@import '../../styles/typography';
+
+.date-picker {
+	@include bodyText;
+	height: 40px;
+	width: 180px;
+	background-color: #FFF;
+	border: solid 1px #BBB;
+	border-radius: 5px;
+	padding: 6px;
+}

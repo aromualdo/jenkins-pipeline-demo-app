@@ -1,0 +1,10 @@
+@import "../../styles/typography";
+
+.platform-option {
+	display: block;
+	margin-bottom: 12px;
+}
+
+.quota {
+	@include smallText;
+}

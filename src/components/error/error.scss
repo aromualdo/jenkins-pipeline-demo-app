@@ -1,0 +1,22 @@
+@import '../../styles/typography';
+@import '../../styles/variables';
+
+$backgroundColor: #EE5567;
+
+.error {
+	display: flex;
+	background-color: $backgroundColor;
+	padding: 16px;
+	color: $white;
+	font-size: 16px;
+	align-items: center;
+}
+
+.icon {
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+	background: no-repeat url(../../images/icon-error.png);
+	margin-right: 16px;
+	padding-right: 32px;
+}

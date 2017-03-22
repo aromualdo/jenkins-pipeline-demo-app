@@ -1,0 +1,41 @@
+@import "./variables";
+
+@mixin headerText() {
+	color: $darkGray;
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.text--header {
+	@include headerText;
+}
+
+@mixin subHeaderText() {
+	color: $gray;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.text--subheader {
+	@include subHeaderText;
+}
+
+@mixin bodyText() {
+	color: $gray;
+	font-size: 14px;
+}
+
+.text--body {
+	@include bodyText;
+}
+
+@mixin smallText() {
+	color: $gray;
+	font-size: 12px;
+}
+
+.text--small {
+	@include smallText;
+}

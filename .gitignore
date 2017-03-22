@@ -1,25 +1,12 @@
-# IntelliJ Files
-.idea/
-*.ipr
-*.iws
-*.iml
-
-# Eclipse Files
-.classpath
-.project
-
-# Build outputs
-target/
-reports/
-
-# Vagrant outputs
-.vagrant
-
-# OS hidden files
+node_modules/
+dist/
+.sass-cache/
+.tmp/
 .DS_Store
-
-# Local database files
-*.db
-
-# Local config files
-/config.yaml
+.idea/
+stats.json
+test-results.xml
+coverage/
+npm-debug.log
+www/
+*.orig
